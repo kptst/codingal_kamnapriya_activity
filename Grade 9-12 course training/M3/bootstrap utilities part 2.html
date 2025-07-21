@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Utilities - Part 2</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .box {
+      background-color: #fff3cd;
+      border: 2px dashed #ffc107;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .relative-box {
+      position: relative;
+      height: 100px;
+      background: #e3f2fd;
+    }
+    .absolute-box {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #0d6efd;
+      color: white;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+<body class="p-4">
+
+  <h2 class="text-warning mb-4">🛠️ Bootstrap Utilities - Part 2</h2>
+
+  <!-- Borders -->
+  <div class="box border border-primary rounded">
+    <strong>Border Utilities:</strong> Border + Rounded Corners
+  </div>
+
+  <!-- Shadow -->
+  <div class="box shadow">
+    <strong>Shadow Utility:</strong> This box has a shadow
+  </div>
+
+  <!-- Positioning -->
+  <div class="relative-box mb-4">
+    <div class="absolute-box">I'm positioned!</div>
+  </div>
+
+  <!-- Visibility -->
+  <div class="box">
+    <span class="d-none d-md-inline">Hidden on small screens, visible on medium+</span>
+  </div>
+
+  <!-- Flex Helper -->
+  <div class="d-flex justify-content-around box bg-light">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+  </div>
+
+</body>
+</html>

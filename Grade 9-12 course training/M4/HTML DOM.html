@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript DOM Example</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background-color: #f0f0f0; }
+    #box { width: 200px; height: 100px; background-color: lightblue; padding: 10px; margin-bottom: 15px; border-radius: 8px; transition: 0.3s; }
+    button { margin-right: 10px; padding: 5px 10px; }
+  </style>
+</head>
+<body>
+
+  <h2>🧱 JavaScript DOM Manipulation Demo</h2>
+
+  <!-- Div that will be manipulated -->
+  <div id="box">This is a box</div>
+
+  <!-- Buttons to manipulate DOM -->
+  <button onclick="changeColor()">Change Color</button>
+  <button onclick="changeText()">Change Text</button>
+  <button onclick="toggleSize()">Toggle Size</button>
+
+  <!-- Input and button to update content -->
+  <br><br>
+  <input type="text" id="userInput" placeholder="Enter new text" />
+  <button onclick="updateBoxText()">Update Box</button>
+
+  <script>
+    const box = document.getElementById("box");
+
+    function changeColor() {
+      box.style.backgroundColor = "orange";
+    }
+
+    function changeText() {
+      box.innerText = "The text has been changed!";
+    }
+
+    function toggleSize() {
+      box.style.height = (box.style.height === "100px") ? "150px" : "100px";
+    }
+
+    function updateBoxText() {
+      const input = document.getElementById("userInput").value;
+      if (input.trim() === "") {
+        alert("Please enter some text!");
+      } else {
+        box.innerText = input;
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Model 1</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body{
+      background-color: lightblue;
+      color: white;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .grad1 {
+      background-image: linear-gradient(pink, red, yellow);
+    }
+    
+    h3,p {
+      color: blue;
+      font-size: 20px;
+    }
+    /* below css use for class */
+    .kamna{
+      color: red;
+      font-size: 30px;
+    }
+    /* below css use for id */
+    #priya{
+      color: yellow;
+      font-size: 40px
+    }
+    h2{
+      background-color: yellowgreen;
+    }
+  </style>
+</head>
+
+<body>
+  Hello world
+
+  <!-- link -->
+  <h1> Today i am going to learn hyperlink tag</h1>
+  <p> my hyperlink is <a href="https://www.google.com/webhp?authuser=1"> HYPERLINK</a></p>
+
+  <!-- list -->
+  <h1> Today i am going to learn list tag</h1>
+
+  <!-- ordered list -->
+  <h2> ordered list </h2>
+  <ol>
+    <li> first </li>
+    <li> second </li>
+    <li> third </li>
+  </ol>
+
+  <!-- unordered list -->
+  <h2> unordered list </h2>
+  <ul>
+    <li> first </li>
+    <li> second </li>
+    <li> third </li>
+  </ul>
+
+<!-- TABLE -->
+  <h1> Today i am going to learn table tag</h1>
+  <table>
+    <thead>
+      <tr>
+        <th> Name </th>
+        <th> Age </th>
+        <th> Gender </th>
+      </tr>
+    </thead>
+      <tr>
+        <td> Anu </td>
+        <td> 21 </td>
+        <td> Female </td>
+      </tr>
+      <tr>
+        <td> Anu </td>
+        <td> 21 </td>
+        <td> Female </td>
+      </tr>
+  </table>
+
+  <!-- MEDIA TAGS -->
+  <!-- IMAGES - <img> it is empty or self closing-->
+  <p> This is me  please check my image </p>
+  <img src="https://alterno.net/wp-content/uploads/2025/02/reasons-to-protect-the-environment.jpg" alt="my image" width="100" height="100" >
+
+  <!-- VIDEO -->
+  extention of video
+  <video width="320" height="240" controls autoplay>
+    <source src="https://www.youtube.com/embed/6ZfuNTqbHE8" type="video/mp4">
+  </video>
+
+  <!-- AUDIO -->
+  <audio controls>
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- iframe -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZfuNTqbHE8" title="YouTube video player" frameborder="0" allow=" allowfullscreen">
+</iframe>
+
+  <!-- Semantic and non semantics -->
+  <!-- semantic -->
+  <!-- semantic- means meaning full tag - header, footer, section, article, nav, aside, main, figure, figcaption, time, mark, summary, details, dialog, menu, menuitem, progress, meter, wbr, canvas, svg, audio, video -->
+<!-- HEAD- THIS IS MAIN TAG OF HTML - IT CONTAINS META, TITLE, LINK, STYLE, SCRIPT, BASE, META -->
+<!-- HEADER- THIS IS USED TO CONTAIN HEADING, NAV, SEARCH, LOGO, BANNER, ETC -->
+<!-- HEADING- THIS IS USED TO CONTAIN HEADING OF THE PAGE -->
+  <header>
+    <h1> This is header </h1>
+    <nav>
+      <h1> This is nav </h1>
+      <li> home</li>
+      <li> about</li>
+      <li> contact</li>
+    </nav>
+  </header>
+  <article>
+    <h1> This is article </h1>
+    <p> This is paragraph </p>
+  </article>
+  <section>
+    <h1> This is section </h1>
+    <p> This is paragraph </p>
+  </section>
+  <figure>
+    <h1> This is figure </h1>
+    <img src="https://alterno.net/wp-content/uploads/2025/02/reasons-to-protect-the-environment.jpg" alt="my image" width="100" height="100" >
+  </figure>
+  <footer>
+    <h1> This is footer </h1>
+  </footer>
+
+  <!-- non semantic -->
+  <div>  
+    <h1> This is div </h1>
+  </div>
+  <div>
+    <article> using non semantic tag</article>
+  </div>
+  <div> 
+    <img src="https://alterno.net/wp-content/uploads/2025/02/reasons-to-protect-the-environment.jpg" alt="my image" width="100" height="100" >
+  </div>
+  <div>
+    <h1> This is footer </h1>
+  </div>
+
+  <!-- FORM -->
+  <form class="grad1">
+    <fieldset>
+      <legend> CONTACT FORM</legend>
+    <h1> CONTACT FORM</h1>
+    <label> Full Name</label>
+    <input type="text" name="fullname" placeholder="Enter your full name" required"> <br>
+    <label> Email</label><br>
+    <input type="email" name="email" placeholder="Enter your email"> <br>
+    <label>Phone Number</label>
+    <input type="number" name="phone" placeholder="Enter your phone number"> <br> <br>
+      <label> Gender</label>
+      <input type="radio" name="gender" value="male"> Male
+      <input type="radio" name="gender" value="female"> Female
+      <input type="radio" name="gender" value="other"> Other <br> <br>
+
+      <label>
+        Country
+        <select name="country">
+          <option value="nepal"> Nepal </option>
+          <option value="india"> India </option>
+          <option value="china"> China </option>
+        </select>
+      </label><br><br>
+    <input type="submit" value="Submit"><br> <br> <br>
+    <button>
+      <input type="reset" value="Reset">
+    </button>
+
+    </fieldset>
+  </form>
+
+ <h1> Using CSS</h1>
+<p style="color: green; font-size: 20px;"> here is my inline CSS</p>
+
+<h3> here using Internal</h3>
+<h3 class="kamna"> using class</h3>
+<h3 id="priya"> using ID</h3>
+
+  
+<h2 class="external"> USING EXTERNAL CSS</h2>
+
+  <!-- CSS background effects -->
+  <div class="efe" style="background-color: red; color: white; padding: 20px; text-align: center;">
+  </div>  <br>
+
+    <!-- ANIMATION -->
+
+    <div>
+      Hii this is animation
+    </div>
+
+    <p class="Tyopo"> using  Typography</p>
+
+  <div>
+    Transformer
+  </div>
+  <div id= "transformer"> transformer-codingal</div>
+
+  <p class="Typography">  Using Typography</p>
+  <p class="Transhform">  Using Transhform</p>
+  <p class="text-decoration">  Using text-decoration</p>
+  <p class="text-transform">  Using text-transform</p>  
+  <p class="textindent">  Using textindent</p>
+  <p class="textshadow">  Using textshadow</p>
+  <p class="boxshadow">  Using boxshadow</p>
+
+</body>
+
+</html>
+
+
+
+
+

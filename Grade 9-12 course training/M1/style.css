@@ -1,0 +1,51 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
+.external {
+  color: #781593;
+  font-size: 30px;
+}
+
+div{
+  background-color: #781593;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  animation: mymove 5s infinite;
+  animation-name: mymove;
+  animation-duration: 5s;
+}
+
+@keyframes mymove{
+  0% {background-color: red;}
+  25% {background-color: yellow;}
+  50% {background-color: blue;}
+  75% {background-color: green;}
+  
+}
+
+.Tyopo{
+  background-color: #eaa9de;
+  color: white;
+  text-shadow: 2px 2px 1px black;
+  box-shadow: 5px 5px 5px 5px blue;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+div{
+  background-color: #4b54d2;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: overline line-through;
+  text-transform: lowercase;
+  text-shadow: darkgrey;
+  text-indent: 10%;
+}
+
+#transformer{
+  transform: rotate(180deg);
+}

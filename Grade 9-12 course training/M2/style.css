@@ -1,0 +1,36 @@
+.typo1{
+    color:blue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.typo2{
+    font-size: 30px;
+    font-family: 'Courier New', 'Courier New', Courier, monospace
+}
+div{
+    width: 300px;
+    height: 100px;
+    background-color: chocolate;
+    border: 1px solid black;
+}
+#myDiv{
+    transform: rotate(170deg);
+}
+h2{
+    text-decoration: underline;
+    text-transform: lowercase;
+}
+h4{
+    text-decoration: overline;
+    text-transform: capitalize;
+}
+h5{
+    text-shadow: 2px 2px 2px red;
+    text-decoration: line-through;
+    text-indent: 60%;
+    font-size: 30px;
+}
+h6{
+    text-decoration: dotted;
+    box-shadow: 9px 9px 5px rebeccapurple;
+    font-size: 30px;
+}

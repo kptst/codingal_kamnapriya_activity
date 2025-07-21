@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript: Method, Loop & Switch Demo</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f9f9f9; }
+    .output { background: #e9f5ff; padding: 15px; margin-top: 10px; border-radius: 8px; }
+    button { margin-top: 10px; padding: 8px 12px; }
+  </style>
+</head>
+<body>
+
+  <h2>🛠 JavaScript Method, Loop & Switch Demo</h2>
+
+  <button onclick="runAll()">Run Demo</button>
+
+  <div class="output" id="output"></div>
+
+  <script>
+    const outputDiv = document.getElementById("output");
+
+    // ✅ METHOD: A reusable function
+    function greetUser(name) {
+      return `Hello, ${name}!`;
+    }
+
+    // 🔁 LOOP: Using for loop to print numbers
+    function loopNumbers() {
+      let nums = "";
+      for (let i = 1; i <= 5; i++) {
+        nums += i + " ";
+      }
+      return `Numbers using for loop: ${nums}`;
+    }
+
+    // 🔀 SWITCH: Choose fruit price
+    function getFruitPrice(fruit) {
+      let price;
+      switch (fruit.toLowerCase()) {
+        case "apple":
+          price = "₹100 per kg";
+          break;
+        case "banana":
+          price = "₹50 per dozen";
+          break;
+        case "mango":
+          price = "₹120 per kg";
+          break;
+        default:
+          price = "Fruit not available.";
+      }
+      return `Price of ${fruit}: ${price}`;
+    }
+
+    // Method to run all examples
+    function runAll() {
+      let message = "";
+
+      // Call method
+      message += greetUser("Kamna") + "<br>";
+
+      // Loop result
+      message += loopNumbers() + "<br>";
+
+      // Switch case result
+      message += getFruitPrice("Mango") + "<br>";
+      message += getFruitPrice("Banana") + "<br>";
+      message += getFruitPrice("Pineapple") + "<br>";
+
+      outputDiv.innerHTML = message;
+    }
+  </script>
+
+</body>
+</html>

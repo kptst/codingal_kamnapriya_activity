@@ -1,0 +1,77 @@
+body{
+  background-color: #e0a8f5;
+}
+.background{
+  height: 80px;
+  background-repeat: repeat;
+  background-image: url('https://en.barbiepedia.com/img/barbie/800/X9449_0.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+#grad1{
+  background: linear-gradient(to bottom right, #006eff, yellow);
+}
+#grad2{
+  height: 200px;
+  background: radial-gradient(circle, red, yellow, pink);
+  
+}
+
+.animation{
+  animation-name: anim1;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes anim1{
+  5% {background-color: red;}
+  10% {background-color: yellow;}
+  20% {background-color: blue;}
+  30% {background-color: green;}
+}
+
+input[type="text"] {
+  border: 2px solid blue;
+}
+input[type="password"] {
+  border: 2px solid #a600ff;
+}
+
+h1+p{
+  color: green;
+  font-size: 50px;
+}
+
+ul > li {
+  color: red;
+}
+
+li:nth-child(2){
+  background-color: yellow;
+}
+a{
+  color: red;
+  font-size: 30px
+}
+a:hover{
+  font-size: 50px;
+  color: #026e53;
+}
+div:not(.div1){
+  background-color: pink;
+}
+
+.decorated1::before{
+  content: "STAR 🌟";
+  color: #048dc8;
+  
+}
+.decorated2::after{
+  color: #bb04c8;
+  content: "STAR 🌟";
+}
+p::first-letter{
+  color: red;
+  font-size: 50px;
+}

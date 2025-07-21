@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Array and Call Stack Demo</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f9f9f9; }
+    h2 { color: #333; }
+    pre { background: #eee; padding: 10px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+
+  <h2>✅ JavaScript Array Demo</h2>
+  <div id="arrayOutput"></div>
+
+  <h2>🌀 JavaScript Call Stack Demo</h2>
+  <div id="stackOutput"></div>
+
+  <script>
+    // ==== ARRAY DEMO ====
+    const fruits = ["Apple", "Banana", "Mango"];
+
+    // Modify array
+    fruits.push("Orange");
+    fruits.unshift("Pineapple");
+    fruits.pop(); // Removes "Orange"
+
+    // Output array
+    const arrayOutput = document.getElementById("arrayOutput");
+    arrayOutput.innerHTML = `
+      <strong>Array Contents:</strong> ${fruits.join(", ")}<br>
+      <strong>First Fruit:</strong> ${fruits[0]}<br>
+      <strong>Total Fruits:</strong> ${fruits.length}
+    `;
+
+    // ==== CALL STACK DEMO ====
+    function first() {
+      second();
+      log("Finished: First");
+    }
+
+    function second() {
+      third();
+      log("Finished: Second");
+    }
+
+    function third() {
+      log("Doing: Third");
+    }
+
+    function log(message) {
+      const stackOutput = document.getElementById("stackOutput");
+      stackOutput.innerHTML += `<pre>${message}</pre>`;
+    }
+
+    // Call the first function (starts the call stack)
+    first();
+  </script>
+
+</body>
+</html>
