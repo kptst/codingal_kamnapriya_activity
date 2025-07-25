@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        Advance SELECTOR
+        <style>
+            input[type="text"]{
+                border: 2px dashed red;
+            }
+            ul > li{
+                color:yellowgreen;
+            }
+            li:nth-child(2){
+                background-color: violet;
+            }
+            h1 +p {
+                color:brown;
+            }
+            a{
+                color:brown;
+            }
+            a:hover{
+                color:blue;
+            }
+            div:not(.decorated){
+                background-color: blue;
+            }
+            .decorated::before{
+                content: "star ⭐";
+                color:turquoise;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" placeholder="name">
+        <ul>
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+        </ul>
+        <h1>sibling child</h1>
+        <p> This is advance Selector</p>
+        <a href="#">Hover used</a>
+        <div class="class1"> using pseudo elements-::not selector</div>
+        <div class="class2"> using pseudo elements-::not selector</div>
+        <div class="decorated">using before pseudo element</div>
+
+    </body>
+</html>

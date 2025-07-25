@@ -1,0 +1,43 @@
+body{
+    background: linear-gradient(to bottom right, #006eff, yellow);
+    /* background-image: url('https://en.barbiepedia.com/img/barbie/800/X9449_0.jpg'); */
+}
+.background{
+    background-color: aquamarine;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 80%;
+  box-sizing: 80%;
+}
+#grad1{
+  background: linear-gradient(to bottom right, #006eff, yellow);
+}
+#grad2{
+  height: 200px;
+  background: radial-gradient(circle, red, yellow, pink);
+  
+}
+.animation{
+    animation-name: kp;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes kp{
+  5% {background-color: red;}
+  10% {background-color: yellow;}
+  20% {background-color: blue;}
+  30% {background-color: green;}
+}
+
+.example1{
+  margin: 30%;
+  padding: 65%;
+  border: solid red;
+  width: auto;
+  height:70%
+}
+a:hover{
+  color:blueviolet;
+
+}
+
