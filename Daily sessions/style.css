@@ -27,17 +27,25 @@ body{
   10% {background-color: yellow;}
   20% {background-color: blue;}
   30% {background-color: green;}
-}
-
-.example1{
-  margin: 30%;
-  padding: 65%;
-  border: solid red;
-  width: auto;
-  height:70%
-}
-a:hover{
+}a:hover{
   color:blueviolet;
 
 }
+
+
+.example1{
+  margin: 5px 4px 5px 4px;
+  padding: 5px 4px 5px 4px;
+  border: 2px solid red;
+  height:10%;
+  width: 15%;
+}
+#float1{
+  float: right;
+}
+#float2{
+  float: left;
+}
+
+
 

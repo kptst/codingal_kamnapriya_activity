@@ -1,7 +1,50 @@
 <!DOCTYPE html>
 <html>
     <head> <title>Using background, gradiant and animation</title>
-    <link href="style.css" rel="stylesheet">
+    <!-- <link href="style.css" rel="stylesheet"> -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+     <style>
+        .col-sm{
+            text-align: center;
+            border: 3px dotted red;
+        }
+        .col-lg{
+            text-align: right;
+            border: 3px dotted rgb(51, 0, 255);
+        }
+        div.static{
+            position: static;
+            border: 3px solid red;
+        }
+        div.fixed{
+            position: fixed;
+            top: 0;
+            right: 20px;
+            width: 250px;
+            border: 4px dotted blue;
+        }
+        div.absolute{
+            position: absolute;
+            left: 50px;
+            border: 3px dashed green;
+        }
+        div.relative{
+            position: relative;
+            left: 50px;
+            border: 3px solid yellow;
+        }
+        div.sticky{
+            position: sticky;
+            bottom: 10px;
+            left:20px;
+            width: 100px;
+            border: 4px dotted salmon;
+        }
+        img{
+            opacity: 20%;
+        }
+     </style>
     </head>
     <body>
         <h1> Using backround effect</h1>
@@ -10,12 +53,59 @@
         <p id="grad2"> Using radial-Gradiant</p>
 
         <p class="animation"> using Animation</p>
+        <a>using property hover</a>
 
         <!-- BOX MODEL -->
          <p class="example1"> using box model properties</p>
- 
-         <a>using property hover</a>
+         <p id="float1">Using for float </p>
+         <p id="float2">Using for float </p>
          
+         <!-- BOOTSTRAP-Typography & GRID -->
+
+         <div class="container"> 
+            <h1>first grid type AND TYPOGRAPHY CONTAINER></h1>
+            <h1 class="display-1"> Codingal-1</h1>
+            <h1 class="display-2"> Codingal-2</h1>
+            <h1 class="display-3"> Codingal-3</h1>
+            <h1 class="display-4"> Codingal-4</h1>
+
+         </div>
+
+         <h2>Typography list</h2>
+         <ul>
+            <dl>
+                using description tag in bootstrap
+                <dt>COFFEE</dt>
+                <dd>White hot drink with strong coffee falvour</dd>
+            </dl>
+         </ul>
+
+         <div class="row"> row typw grid</div>
+         <div class="col-sm"> column as small</div>
+         <div class="col-lg"> column as large</div>
+
+         <!-- POSITIONING IN CSS AND OPACITY -->
+          <div class="static"> USING STATIC</div>
+          <div class="fixed">USING FIXED </div>
+          <div class="absolute"> USING ABSOLUTE</div>
+          <div class="relative"> Using Relative</div>
+          <div class=" sticky">USING STICKY</div>
          
+          <img src="/Users/kamnapriya/Downloads/zoom-background-6.png" alt="Opacity">
+
+        <!-- CONTAINER-Fluide -->
+         <!-- (Container) -->
+          <div class="container bg-success (text-while)" >
+            <h1>Container-1 used in Bootstrap code</h1>
+            <p> This part inside a container 1</p>
+            <p>The continer1</p>
+          </div>
+          <!-- add color and border mb-{size}   p is known prefix (t-top, b-bottom, l-left,r- right)-->
+          <div class= "container p-3000 mb-300 bg-primary text-while">
+            <h1>Container-2 used in Bootstrap code</h1>
+            <p> This part inside a container 2</p>
+            <p>The continer2</p>
+          </div>
+          
     </body>
 </html>

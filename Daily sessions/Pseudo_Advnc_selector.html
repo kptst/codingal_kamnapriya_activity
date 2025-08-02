@@ -21,12 +21,16 @@
             a:hover{
                 color:blue;
             }
-            div:not(.decorated){
+            div:not(.class1){
                 background-color: blue;
             }
             .decorated::before{
                 content: "star ⭐";
                 color:turquoise;
+            }
+            h2 + p{
+                font-size: 30px;
+                background-color: aquamarine;
             }
         </style>
     </head>
@@ -44,5 +48,8 @@
         <div class="class2"> using pseudo elements-::not selector</div>
         <div class="decorated">using before pseudo element</div>
 
+        <!-- SIBLING Selector -->
+        <h2>HIIIII.... This is me your sibling</h2>
+        <p> Can i use into one of the feature </p>
     </body>
 </html> 
