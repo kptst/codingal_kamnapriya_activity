@@ -112,6 +112,41 @@ for i in a:
         
       print("variable value", var)
 
+# EXCEPTIONAL HANDLING
+# ACTIVITY 1
 
+try:
+  num=int(input("Enter a number"))
+  print("the entered number is", num)
+except ValueError as ex:
+  print("Exception", ex) 
+  
+# ACTIVITY 2
 
-    
+try:
+  num1, num2= eval(input("Enter two number, seperated by comma: "))
+  result=num1/num2
+  print("Result is", result)
+except SyntaxError:
+  print("comma is missing")
+except ZeroDivisionError:
+  print("Division by Zero is error")
+except:
+  print("Wrong input")
+else:
+  print("No Exception")
+  
+finally:
+  print("this will execute no matter what you done")
+
+  
+  # ACTIVITY 3
+valid=False
+while not valid:
+    try:
+        n=int(input("Enter a  even number"))
+        while n%2==0:
+            print("Bye")
+            valid=True
+    except ValueError:
+        print("Invalid input")
