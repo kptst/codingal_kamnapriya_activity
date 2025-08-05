@@ -150,3 +150,21 @@ while not valid:
             valid=True
     except ValueError:
         print("Invalid input")
+        
+# ACTIVITY- NUMBER GAME    
+import random
+playing=True
+number=str(random.randint(10,20))
+print("I will generate a number from 0 to 9, & you can guess the one digit at a time")
+print("the game end when u got 1 hero!")
+while playing:
+  guess= input("Give me ur best guess \n")
+  if number == guess:
+    print("you win the game")
+    print("The number was", number)
+    break
+  else:
+    print("you loss the game!!\n")
+    
+    
+    
