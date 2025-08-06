@@ -167,4 +167,14 @@ while playing:
     print("you loss the game!!\n")
     
     
+    # DATETIME & CALENDER MODULE
+    # ACTIVITY 1
+    from datetime import date, time, datetime
+    today_date= date.today()
+    now=datetime.now()
+    print(today_date)
+    print(now)
+    
+    
+    
     
