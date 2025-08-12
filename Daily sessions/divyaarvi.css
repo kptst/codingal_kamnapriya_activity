@@ -1,0 +1,12 @@
+.col{
+    text-align: center;
+    border: 5px dotted red ;
+    }
+.container{
+    container-type: inherit;
+    border: 10px solid blue;
+    }
+.row2{
+    border: 6px dashed green;
+    text-align: center;
+    }
