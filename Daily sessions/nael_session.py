@@ -176,5 +176,81 @@ while playing:
     print(now)
     
     
+    # LIST- ACTIVITY-1
+    empty_list=[]
+     
+    number_list=[1,2,3,4,5,6,7,8,9]
+    print(number_list)
     
-    
+operator_list=[1,2,4] *3
+print(operator_list)
+
+# ACTIVITY-2
+def match_words(words):
+    ctr=0
+    list=[]
+    for word in words:
+        if len(word)>1 and word[0]==word[-1]:
+            ctr+=1
+            list.append(word)    
+print(match_words(['abc', 'xyz', 'aba', '1221']))
+print("The number of words that are same First and Last letter are :" , " and the words are : ", list)
+
+# ACTIVITY 3
+list=[1,2,3,4,5,6,7,8,9]
+print("Original list : ", list)
+
+count=0
+for i in list:
+    count+=i
+avg=count/len(list)
+print("Average of list : ",)
+print("Sorting of the list below")
+list.sort()
+print("Largest number in the list : ", list[-1])
+print("Largest number in the list : ", list[8])
+print("length of the list : ", len(list))
+print("reverse of the list : ", list[::-1])
+
+print(list[-1])
+print(list[-2])
+print(list[-3])
+print(list[-4])
+print(list[-5])
+
+print("\n",list[0])
+print(list[1])
+print(list[2])
+print(list[3])
+print(list[4])
+print(list[5])
+
+# TUPLES-ACTIVITY-1
+tuplex=(1,2,3,4,5)
+print("number tuples", tuplex)
+
+print("length of tuples", len(tuplex))
+print("count of tuples", count(tuplex))
+
+tuplex2=("hi", "hello", "hey")
+print("concatination of tuples", tuplex + tuplex2)
+print(tuplex[3])
+print(tuplex2[2:3])
+print(tuplex(-3))
+
+# ACTIVITY-2-flip-flop
+def palind(r):
+  e=len(r)-1
+  s=0
+  while(s<e):
+    if(r[s]!=r[e]):
+        s+=1
+        e-=1
+    return True
+
+r=(1,2,3,3,2,1)
+if(palind(r)):
+  print("The tuple is flip flop")
+else:
+  print("The tuple is not flip flop")
+
