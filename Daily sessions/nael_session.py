@@ -254,3 +254,38 @@ if(palind(r)):
 else:
   print("The tuple is not flip flop")
 
+# DICTIONARY-ACTIVITY-1
+student_data={'id1':{'name': ['sara'], 'class':['v'],
+              'subject':['english', 'math', 'sci']},
+              'id2':{
+                'name': ['rahim'], 'class':['v'],
+              'subject':['english', 'math', 'sci']
+              },
+              'id3':{
+                'name': ['rsara'], 'class':['v'],
+              'subject':['english', 'math', 'sci']
+              },
+              'id4':{
+                'name': ['rahim'], 'class':['v'],
+              'subject':['english', 'math', 'sci']
+              },
+            }
+result={}
+for key.value in students_data.item():
+  if value not in result.values():
+    result[key]=value
+    
+print(result)
+
+# ACTIVITY-2
+
+test_dict={'codingal':'2', 'is':2,'best': 2,'for':2, 'coding':1}
+print("Original dictionary: "+ str(test_dict))
+
+K=2
+res=0
+for key in test_dict:
+  if test_dict[key]==K:
+    res=res+1
+    
+print("frequency of K is ", + str (res))
