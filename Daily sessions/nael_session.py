@@ -289,3 +289,37 @@ for key in test_dict:
     res=res+1
     
 print("frequency of K is ", + str (res))
+
+
+# SET & ARRAY
+# ACTIVITY-1 & 2(SET)
+my_set={1,2,3}
+print(my_set)
+
+my_set={1.0, "hello", (1,2,3)} #mixed datatype set
+print(my_set)
+
+my_set={1,2,3,4,3,2}
+print(my_set)
+
+my_set=set([1,2,3,2])
+print(my_set)
+my_set.pop()
+print(my_set)
+my_set.pop()
+print(my_set)
+
+set1={"red", "blue", "green"}
+set2={"black","neon", "green"}
+print("original set elements", )
+set3=set1.intersection(set2)
+print("intersection is", set3)
+# ACTIVITY-3 (ARRAY)
+import array as arr
+array_num=arr.array("i",[1,3,5,7,9])
+print("original array", array_num)
+print("append 11 at the end of array", array_num.append(11))
+print("array after appending", array_num)
+array_num.reverse()
+print("array after reversing", array_num)
+

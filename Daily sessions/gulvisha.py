@@ -29,3 +29,29 @@ height=input("tell me H")
 weight=float(input("tell me Weight"))
 BMI= weight/(height/100)**2
 print("Your BMI is : ", BMI)
+
+# PY-OPERATOR-III (ACTIVITY-1)
+x=5
+if(type(x) is int):
+    print('true')
+else:
+    print("false")
+    
+    
+if(type(x) is not int):
+    print('true')
+else:
+    print("false")
+    
+    
+# ACTIVITY-2
+a=10
+b=-10
+print("a>>1", a>>1)
+print("b>>1", b>>1)
+print("a<<1", a<<1)
+print("b<<1", b<<1)
+
+
+# ACTIVITY-3
+
