@@ -323,3 +323,119 @@ print("array after appending", array_num)
 array_num.reverse()
 print("array after reversing", array_num)
 
+# ADVANCE FUNCTION-ACTIVITY-1
+
+number1=[1,2,3]
+number2=[4,5,6]
+result=map(lambda x,y:x+y, number1,number2)
+print("sum of two number", list(result))
+
+# USING MAP
+nums=[1,2,3,4]
+def sq(n):
+  retunr n*n
+square=list(map(sq,nums))
+print("sq of num list", square)
+
+# ACTIVITY-2
+s1={1,2,3}
+s2={4,5,6,7,8,9}
+s3=list(zip(s1,s2))
+print("\nzip of two set", s3)
+
+# ACTIVITY-3
+
+for i in range(10):
+  if i ==5:
+    ptint(entry)
+    exit()
+  print(i)
+
+# TIC-TAC-TOE
+
+theBoard={'7':' ','8':' ','9':' ',
+          '4':' ','5':' ','6':' ',
+          '1':' ','2':' ','3':' '}
+board_keys=[]
+for key in theBoard:
+  board_keys.append(key)
+
+def printBoard(board):
+  print(board['7'] + '|' + board['8'] + '|' + board['9'])
+  print('-+-+-')
+  print(board['4'] + '|' + board['5'] + '|' + board['6'])
+  print('-+-+-')
+  print(board['1'] + '|' + board['2'] + '|' + board['3'])
+
+def game():
+  turn='X'
+  count=0
+  for i in range(10):
+    printBoard(theBoard)
+    print("It's your turn," + turn + ".Move to which place?")
+    move=input()
+    if theBoard[move]==' ':
+      theBoard[move]=turn
+      count+=1
+    else:
+      print("That place is already filled.\nMove to which place?")
+      continue
+
+    if count>=5:
+      if theBoard['7']==theBoard['8']==theBoard['9']!=' ':
+        printBoard(theBoard)
+        print("\nGame Over.\n")
+        print(" **** " +turn + " won. ****")
+        break
+      elif theBoard['4']==theBoard['5']==theBoard['6']!=' ':
+        printBoard(theBoard)
+        print("\nGame Over.\n")
+        print(" **** " +turn + " won. ****")
+        break
+      elif theBoard['1']==theBoard['2']==theBoard['3']!=' ':
+        printBoard(theBoard)
+        print("\nGame Over.\n")
+        print(" **** " +turn + " won. ****")
+        break
+      elif theBoard['1']==theBoard['4']==theBoard['7']!=' ':
+        printBoard(theBoard)
+        print("\nGame Over.\n")
+        print(" **** " +turn + " won. ****")
+        break
+      elif theBoard['2']==theBoard['5']==theBoard['8']!=' ':
+        printBoard(theBoard)
+        print("\nGame Over.\n")
+        print(" **** " +turn + " won. ****")
+        break
+      elif theBoard['3']==theBoard['6']==theBoard['9']!=' ':
+        printBoard(theBoard)
+        print("\nGame Over.\n")
+        print(" **** " +turn + " won. ****")
+        break
+      elif theBoard['7']==theBoard['5']==theBoard['3']!=' ':
+        printBoard(theBoard)
+        print("\nGame Over.\n")
+        print(" **** " +turn + " won. ****")
+        break
+      elif theBoard['1']==theBoard['5']==theBoard['9']!=' ':
+        printBoard(theBoard)
+        print("\nGame Over.\n")
+        print(" **** " +turn + " won. ****")
+        break
+      if count==9:
+        print("\nGame Over.\n")
+        print("It's a Tie!!")
+        break
+      if turn=='X':
+        turn='O'
+      else:
+        turn='X'
+if __name__=="__main__":
+  game()
+      
+
+
+
+
+
+
