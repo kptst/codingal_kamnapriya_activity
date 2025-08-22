@@ -115,3 +115,32 @@ def main():
 # Run the system
 if __name__ == "__main__":
     main()
+    
+    
+
+# Basics of Image Manipulation
+    
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+import requests
+
+# Load image from URL
+url = "https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt5f18c2119ce26485/6668df65db90945e0caf9be6/beautiful-flowers-lotus.jpg?q=70&width=3840&auto=webp"
+response = requests.get(url)
+image_arr = np.asarray(bytearray(response.content), dtype=np.uint8)
+image = cv2.imdecode(image_arr, cv2.IMREAD_COLOR)
+
+# Convert to RGB
+image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+plt.imshow(image_rgb)
+plt.title('RGB Image')
+plt.axis('off')
+plt.show()
+
+# Convert to Grayscale
+gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+plt.imshow(gray_image, cmap='gray')
+plt.title('Grayscale Image')
+plt.axis('off')
+plt.show()
