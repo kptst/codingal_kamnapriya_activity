@@ -336,3 +336,134 @@
 #         my_pen.left(90)
 #         size=size-5
 #     size = size + 1
+
+
+# Activity-1--Argument
+# def total_calc(bill_amount, tip_perc):
+#     total = bill_amount*(1+0.01*tip_perc)
+#     total=round(total,2)
+#     print(f"please pay ${total}")
+# total_calc(150,20)
+
+# Activty-2
+# def cube(number):
+#     return number*number*number
+# def by_three(number):
+#     if number%3==0:
+#         return cube(number)
+#     else:
+#         return False
+# print(by_three(9))
+# print(by_three(4))
+
+
+# Activity-3
+# def factorial(x):
+#     '''this is recursive function to find the factorial of an integer'''
+#     if x==0 or x==1:
+#         return 1
+#     else:
+#         return x*factorial(x-1)
+    
+# print(factorial.__doc__)
+# print("the factorial of 0: ", factorial(0))
+# print("the factorial of 1: ", factorial(1))
+# print("the factorial of 2: ", factorial(2))
+# print("the factorial of 3: ", factorial(3))
+# print("the factorial of 4: ", factorial(4))
+# print("the factorial of 5: ", factorial(5))
+
+
+# Activity-1---break,continue pass
+
+a=input("Enter a word : ")
+for i in a:
+    if (i =='A'):
+        print('A is found')
+    else:
+        print("A not found")
+
+
+for x in range(10):
+    if x % 20 ==0:
+        print('twist')
+    elif x % 15 ==0:
+        pass
+    elif x % 10 ==0:
+        print('shout')
+    elif x % 5 ==0:
+        print('clap')
+    else:
+        print(x)
+        
+        
+var=10
+while var>0:
+    var = var-1
+    if var ==5:
+        continue
+    print('current variable value : ', var)
+    print('good bye!')
+    
+    
+    # DATETIME/CALENDER MODULE
+    # Activity-1
+    
+    from datetime import date, time, datetime
+    
+   from datetime import date, time, datetime
+today = date.today()
+now= datetime.now()
+print("today date is : ", today)
+print("today date and time is: ", now)
+print("current year is : ", today.year)
+print("current month is : ", today.month)
+print("current day is : ", today.day)
+
+
+# Activity-2
+import random
+import time
+
+def getRandomDate(start_date, end_date):
+    print("start date is : ", start_date)
+    randomGenerator = random.random()
+    dateFormat  = "%m/%d/%Y"
+
+    startTime = time.mktime(time.strptime(start_date, dateFormat))
+     # print("start time is : ", startTime)    
+    endTime = time.mktime(time.strptime(end_date, dateFormat))
+
+    randomTime = startTime + randomGenerator * (endTime - startTime)
+    randomDate = time.strftime(dateFormat,time.localtime(randomTime))
+    return randomDate
+print("random date is : ", getRandomDate("1/1/2020", "1/1/2021"))
+
+
+# Activity-3
+def  hotel_cost(nights):
+    return 140*nights
+def plane_ride_cost(city):
+     if city=="Charlotte":
+         return 183
+     elif city=="Tampa":
+         return 220
+     elif city=="Pittsburgh":
+         return 222
+     elif city=="Los Angeles":
+         return 475
+
+def rental_car_cost(days):
+        if days>=7:
+            return 40*days-50
+        elif days>3:
+            return 40*days-20
+        else:
+             return 40*days
+
+def trip_cost(city,days,spending_money):
+        return rental_car_cost(days)+hotel_cost(days)+plane_ride_cost(city)+spending_money
+print(trip_cost("Los Angeles",5,600))
+print(trip_cost("Charlotte",3,200))
+print(trip_cost("Pittsburgh",10,1000))
+print(trip_cost("Tampa",1,100))

@@ -106,3 +106,132 @@ print("sum : ",add(num1,num2))
 print("difference : ",subtract(num1,num2))
 print("product : ",multiply(num1,num2))
 print("quotient : ", divide(num1,num2))
+
+
+my_tuple =()
+print(my_tuple)
+my_tuple =(1,2,3)
+print(my_tuple)
+
+my_tuple =(1,2,3, "hi")
+print(my_tuple)
+
+my_tuple =(1,2,3, "hi", 4.5)
+print(my_tuple)
+
+my_tuple =(1,2,3, "hi")
+print(my_tuple)
+print(my_tuple[0])
+print(my_tuple[1])
+print(my_tuple[2])
+
+print(my_tuple[0:3])
+
+# Activity-2
+my_set={1,2,3,3,3,4,4,5,6,7,7,8,9}
+print("my_set", my_set)
+
+my_set.add(10)
+print("updated my_set", my_set)
+
+set1=my_set
+set2={10,1,2,3, 14,15}
+print("difference : ", set1.difference(set2))
+
+# activity-3
+setun1={"green", "blue"}
+setun2={"blue", "yellow"}
+print("union", setun1.union(setun2))
+
+# Activity-4
+setx={"apple", "banana"}
+sety={"banana", "orange"}
+print("intersection", setx.intersection(sety))
+
+
+# Object oriented prog-2
+# Activity-1
+class Employee:
+  def __init__(self): #constructor
+    print("Employee created")
+    
+  def __del__(self):  #Destructor
+    print("Destructor called. employee deleted.")
+obj = Employee()
+del obj
+
+# Library Management System using OOP, Loops, and Conditionals
+
+class Library:
+    def __init__(self, name):
+        self.name = name
+        self.books = ["Harry Potter", "Rich Dad Poor Dad", "Atomic Habits", "Python Basics"]
+        self.lend_data = {}  # To track which user has borrowed which book
+
+    def display_books(self):
+        print("\n📚 Available Books in the Library:")
+        for book in self.books:
+            print(f" - {book}")
+
+    def lend_book(self, user, book):
+        if book not in self.books:
+            print(f"❌ The book '{book}' is not available in the library.")
+        elif book in self.lend_data:
+            print(f"⚠️ Sorry, '{book}' is currently lent out to {self.lend_data[book]}.")
+        else:
+            self.lend_data[book] = user
+            print(f"✅ Book '{book}' has been lent to {user}.")
+
+    def add_book(self, book):
+        if book in self.books:
+            print("⚠️ This book already exists in the library.")
+        else:
+            self.books.append(book)
+            print(f"✅ Book '{book}' has been added to the library.")
+
+    def return_book(self, book):
+        if book in self.lend_data:
+            del self.lend_data[book]
+            print(f"✅ Book '{book}' has been returned successfully.")
+        else:
+            print(f"⚠️ '{book}' was not lent out from this library.")
+
+
+# --- Main Program ---
+
+if __name__ == "__main__":
+    my_library = Library("City Central Library")
+
+    while True:
+        print("\n========== Library Menu ==========")
+        print("1. Display Books")
+        print("2. Lend a Book")
+        print("3. Add a Book")
+        print("4. Return a Book")
+        print("5. Exit")
+        print("===================================")
+
+        choice = input("Enter your choice (1-5): ")
+
+        if choice == '1':
+            my_library.display_books()
+
+        elif choice == '2':
+            user = input("Enter your name: ")
+            book = input("Enter the book name you want to borrow: ")
+            my_library.lend_book(user, book)
+
+        elif choice == '3':
+            book = input("Enter the name of the book to add: ")
+            my_library.add_book(book)
+
+        elif choice == '4':
+            book = input("Enter the name of the book to return: ")
+            my_library.return_book(book)
+
+        elif choice == '5':
+            print("\n📘 Thank you for using the Library Management System!")
+            break
+
+        else:
+            print("❌ Invalid choice! Please enter a number between 1 and 5.")

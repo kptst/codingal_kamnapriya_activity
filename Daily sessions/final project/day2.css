@@ -1,0 +1,27 @@
+.about-content h2 {
+  transition: color 0.3s ease;
+}
+.about-content h2:hover {
+  color: #007bff;
+}
+
+/* Activity-2 */
+#projects {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-title {
+  font-weight: 600;
+  color: #333;
+}

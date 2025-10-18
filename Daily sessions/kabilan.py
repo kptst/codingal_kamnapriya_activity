@@ -87,4 +87,36 @@ print("sum of marks is",sum)
 avrg=sum/4
 print("average of marks is",avrg)
 
+# Activity- 1 ---Python challenges
+
+a=4
+b=3
+c=6
+d=7
+e=9
+
+z=(a+e)*c/d**b
+print("value of (a+e)*c/d**b = ", z)
+
+# Activity-2
+numn=int(input("Enter a number(numerator) : "))
+print('numerator', numn)
+numd= int(input("Enter a number(denominator) : "))
+print('denominator',numd)
+
+if numn%numd==0:
+    print("\n" + str(numn) + "is divisible by", +str(numd))
+else:
+    print("\n" + str(numn) + "is not divisible by", +str(numd))
+
+# Activity-3
+mean1=38
+wrong_number=36
+correct_number=56
+total_number=40
+
+sum=mean1*total_number
+print("sum of all numbers", sum)
+num2=sum-wrong_number-correct_number
+print("sum of remaining numbers", num2)
 

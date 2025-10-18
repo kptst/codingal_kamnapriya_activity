@@ -1,0 +1,39 @@
+/* Activity-1 */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  flex: 1;
+}
+
+.navbar a {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #e6f297;
+}
+
+
+/* activity-2 */
+
+
