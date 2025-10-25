@@ -14,7 +14,7 @@
   <style>
     /* Custom Banner Styling */
     .banner {
-      background-image: url('banner.jpg'); /* Replace with your image */
+      background-image: url('banner.jpg');
       background-size: cover;
       background-position: center;
       height: 400px;
@@ -24,10 +24,7 @@
       color: white;
       text-align: center;
       position: relative;
-    }
-
-    /* Optional: dark overlay for readability */
-    .banner::before {
+    }.banner::before {
       content: "";
       position: absolute;
       top: 0;
@@ -42,7 +39,7 @@
       z-index: 1;
     }
 
-     .about-section {
+    .about-section {
       background-color: #f8f9fa;
       padding: 60px 0;
     }
@@ -59,20 +56,32 @@
       font-size: 1.1rem;
       color: #555;
     }
+
+    /*  Social Media Section Styling */
+    .social-section {
+      background-color: #212529;
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+    .social-section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    .social-icons a {
+      color: white;
+      font-size: 1.8rem;
+      margin: 0 15px;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #0d6efd; /* Bootstrap blue */
+    }
   </style>
 </head>
 <body>
-
-  <nav class="navbar">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- 🧭 Navigation Bar -->
+  <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="#">My Website</a>
@@ -90,7 +99,7 @@
     </div>
   </nav>
 
-  <!-- 🖼️ Banner Section -->
+  <!-- Banner Section -->
   <section class="banner">
     <div class="banner-content">
       <h1 class="display-4 fw-bold">Welcome to My Website</h1>
@@ -103,70 +112,137 @@
   <section class="about-section">
     <div class="container">
       <div class="row align-items-center">
-        
-        <!-- Image Column -->
+      
         <div class="col-md-6 about-image">
           <img src="https://via.placeholder.com/500" alt="About us image" />
         </div>
-        
-        <!-- Text Column -->
+      
         <div class="col-md-6 about-content">
           <h2>About Us</h2>
           <p>
-            Welcome to our website! We are a team of passionate developers dedicated to creating high-quality, responsive, and user-friendly web experiences. Our goal is to bring your digital ideas to life with creativity and technology.
+            Welcome to our website! We are a team of passionate developers dedicated to creating high-quality, responsive, and user-friendly web experiences.
           </p>
-          <button class="btn btn-primary mt-3">Learn More</button>
-        </div>
-        
+          <button class="btn btn-primary mt-3">Learn More</button></div>
       </div>
     </div>
   </section>
 
+  <!--  Project Section -->
   <section id="projects" class="container my-5">
-  <h2 class="text-center mb-4">My Projects</h2>
-  
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card shadow-sm">
-        <img src="project1.jpg" class="card-img-top" alt="Project 1">
-        <div class="card-body">
-          <h5 class="card-title">Project One</h5>
-          <p class="card-text">A responsive website built using HTML, CSS, and Bootstrap.</p>
-          <a href="#" class="btn btn-primary">View Project</a>
+    <h2 class="text-center mb-4">My Projects</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="project1.jpg" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Project One</h5>
+            <p class="card-text">A responsive website built using HTML, CSS, and Bootstrap.</p>
+            <a href="#" class="btn btn-primary">View Project</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-md-4">
-      <div class="card shadow-sm">
-        <img src="project2.jpg" class="card-img-top" alt="Project 2">
-        <div class="card-body">
-          <h5 class="card-title">Project Two</h5>
-          <p class="card-text">An interactive JavaScript app with real-time data updates.</p>
-          <a href="#" class="btn btn-primary">View Project</a>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="project2.jpg" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Project Two</h5>
+            <p class="card-text">An interactive JavaScript app with real-time data updates.</p>
+            <a href="#" class="btn btn-primary">View Project</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-md-4">
-      <div class="card shadow-sm">
-        <img src="project3.jpg" class="card-img-top" alt="Project 3">
-        <div class="card-body">
-          <h5 class="card-title">Project Three</h5>
-          <p class="card-text">A portfolio website showcasing creative design layouts.</p>
-          <a href="#" class="btn btn-primary">View Project</a>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="project3.jpg" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">Project Three</h5>
+            <p class="card-text">A portfolio website showcasing creative design layouts.</p>
+            <a href="#" class="btn btn-primary">View Project</a>
+          </div>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- DAY-3 CODE -->
+
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="en"> -->
+<!-- <head> -->
+  <!-- <meta charset="UTF-8" /> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+  <h2>A simple calculator</h2>
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+<!-- </head> -->
+<!-- <body> -->
+<div id="container">
+  <div id="calculator">
+      <div id="display">
+        <input type="text" id="result" disabled />
+      </div>
+
+      <div id="keyboard">
+        <button class="operator" id="clear">C</button>
+        <button class="operator" id="backspace">CE</button>
+        <button class="operator" id="%">%</button>
+        <button class="operator" id="divide">÷</button>
+
+        <button class="number" id="7">7</button>
+        <button class="number" id="8">8</button>
+        <button class="number" id="9">9</button>
+        <button class="operator" id="multiply">&times;</button>
+
+        <button class="number" id="4">4</button>
+        <button class="number" id="5">5</button>
+        <button class="number" id="6">6</button>
+        <button class="operator" id="subtract">−</button>
+
+        <button class="number" id="1">1</button>
+        <button class="number" id="2">2</button>
+        <button class="number" id="3">3</button>
+        <button class="operator" id="add">+</button>
+
+        <button class="empty" id="empty1"></button>
+        <button class="number" id="0">0</button>
+        <button class="empty" id="empty2"></button>
+        <button class="operator" id="equals">=</button>
+      </div>
   </div>
-</section>
+</div>
 
- <!-- Bootstrap JS -->
+  <script src="script.js"></script>
+<!-- </body> -->
+<!-- </html> -->
+<!-- DAY 3 CODE END -->
+
+  <!-- Social Media Section -->
+  <section class="social-section">
+    <div class="container">
+      <h2>Follow Me on Social Media</h2>
+      <div class="social-icons mt-4">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <h2>@copyright-2025</h2>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Icons CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  />
+
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-</body>
-</html>
-
-
-
-
+</body></html>

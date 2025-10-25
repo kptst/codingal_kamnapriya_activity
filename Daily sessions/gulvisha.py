@@ -230,3 +230,37 @@ while var>0:
          continue
      print("current variable value : ", var)
 print("good bye!")
+
+
+# RANDOM & MATH MODULE
+import random
+playing = True
+number= str(random.randint(1,100))
+
+print("Welcome to the Number Guessing Game!")
+print("I am thinking of a number between 1 and 100.")
+print("You have 5 attempts to guess the number.")
+print("Let's start the game!")
+while playing:
+    guess=  input("Enter your guess: ")
+    if guess == number:
+        print("Congratulations! You guessed the number!")
+        playing = False
+        break
+    elif guess < number:
+        print("Your guess is too low.")
+    elif guess > number:
+        print("Your guess is too high.")
+    else:
+        print("Invalid input. Please enter a number between 1 and 100.")
+    print("You have 4 attempts left.")
+
+
+# Activity-3
+import math
+x=10
+y=-15
+print("x+y = ", x+y)
+print('absolute value of -96 and 56 are: ', str(math.fabs(-96)), str(math.fabs(56)))
+print('the value of 2**3 is: ', math.pow(2,3))
+    

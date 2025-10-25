@@ -467,3 +467,141 @@ print(trip_cost("Los Angeles",5,600))
 print(trip_cost("Charlotte",3,200))
 print(trip_cost("Pittsburgh",10,1000))
 print(trip_cost("Tampa",1,100))
+
+
+
+# AI-CHATBOT
+
+print("Welcome, I am a chatbot. How can I halp you")
+name = input("What is your name: ")
+print("Nice to Meet You" + name + "How can I help you?")
+Querry=input("Enter your Querry: ")
+print("Ok I will help in that!")
+print("1. Place an order 2. Help 3.cancel the order")
+choice=input()
+if choice==1:
+    print("Your order placed sucessfully")
+elif choice==2:
+    print("Please let me know your querry: ")
+    Q=input()
+elif choice ==3:
+    print("Your order is cancelled")
+else:
+    print("Thanks for visiting this chatbot")
+    
+    
+    
+    # Sentiment Spy - AI Emotion Detector
+# Uses TextBlob to analyze the sentiment of user input
+
+from textblob import TextBlob
+
+print("🕵️‍♂️ Welcome, Agent! This is the Sentiment Spy Chatbot.")
+print("Your mission: Type messages and I’ll analyze their emotional tone!")
+print("Type 'exit' to end the mission.\n")
+
+while True:
+    message = input("You: ")
+    if message.lower() == 'exit':
+        print("👋 Mission ended. Great job, Agent!")
+        break
+
+    # Analyze sentiment using TextBlob
+    blob = TextBlob(message)
+    sentiment = blob.sentiment.polarity  # value between -1 (negative) to +1 (positive)
+
+    # Determine emotion category
+    if sentiment > 0.1:
+        print("🤖 Sentiment Spy: That sounds *Positive*! 🌞 Keep that energy high, Agent!\n")
+    elif sentiment < -0.1:
+        print("🤖 Sentiment Spy: Hmm... I detect *Negative* vibes. Stay strong, Agent! 💪\n")
+    else:
+        print("🤖 Sentiment Spy: That’s *Neutral*. A balanced report, Agent. ⚖️\n")
+
+
+# Rule-based Chatbot
+
+# def chatbot_response(user_input):
+#     user_input = user_input.lower()  # convert input to lowercase for easy matching
+
+#     # Greeting rules
+#     if "hello" in user_input or "hi" in user_input or "hey" in user_input:
+#         return "Hello! How can I help you today?"
+
+#     # Asking for name
+#     elif "your name" in user_input:
+#         return "I'm ChatBuddy, your friendly chatbot!"
+
+#     # Asking about time
+#     elif "time" in user_input:
+#         from datetime import datetime
+#         now = datetime.now()
+#         return f"The current time is {now.strftime('%H:%M:%S')}."
+
+#     # Asking about date
+#     elif "date" in user_input:
+#         from datetime import datetime
+#         today = datetime.now()
+#         return f"Today's date is {today.strftime('%Y-%m-%d')}."
+
+#     # Farewell
+#     elif "bye" in user_input or "goodbye" in user_input:
+#         return "Goodbye! Have a great day!"
+
+#     # Asking about weather (example static response)
+#     elif "weather" in user_input:
+#         return "I'm not connected to the internet, but I hope it's sunny where you are!"
+
+#     # Default response
+#     else:
+#         return "I'm sorry, I didn't understand that. Can you please rephrase?"
+
+# # Main chat loop
+# print("ChatBuddy: Hello! Type 'bye' to end the chat.\n")
+
+# while True:
+#     user_input = input("You: ")
+#     response = chatbot_response(user_input)
+#     print("ChatBuddy:", response)
+#     if "bye" in user_input.lower():
+#         break
+import random
+from colorama import init, Fore, Style
+init(autoreset=True)
+
+b = [' '] * 9
+p, c = 'X', 'O'
+w = [(0,1,2),(3,4,5),(6,7,8),(0,3,6),(1,4,7),(2,5,8),(0,4,8),(2,4,6)]
+
+def show():
+    print()
+    for i in range(0,9,3):
+        print(f" {b[i] or i+1} | {b[i+1] or i+2} | {b[i+2] or i+3}")
+        if i<6: print("---+---+---")
+    print()
+
+def win():
+    for x,y,z in w:
+        if b[x]==b[y]==b[z]!=" ": return b[x]
+    return None
+
+print(Fore.MAGENTA+"TIC TAC TOE"+Style.RESET_ALL)
+show()
+
+while True:
+    # player move
+    m = int(input(Fore.CYAN+"Your move (1-9): "+Style.RESET_ALL))-1
+    if b[m] != ' ':
+        print(Fore.YELLOW+"Taken!"+Style.RESET_ALL); continue
+    b[m] = p
+    show()
+    if win()==p: print(Fore.GREEN+"You win!"+Style.RESET_ALL); break
+    if ' ' not in b: print(Fore.CYAN+"Draw!"+Style.RESET_ALL); break
+
+    # computer move
+    m = random.choice([i for i,v in enumerate(b) if v==' '])
+    b[m] = c
+    print(Fore.RED+f"AI chose {m+1}"+Style.RESET_ALL)
+    show()
+    if win()==c: print(Fore.RED+"AI wins!"+Style.RESET_ALL); break
+    if ' ' not in b: print(Fore.CYAN+"Draw!"+Style.RESET_ALL); break
