@@ -264,3 +264,105 @@ print("x+y = ", x+y)
 print('absolute value of -96 and 56 are: ', str(math.fabs(-96)), str(math.fabs(56)))
 print('the value of 2**3 is: ', math.pow(2,3))
     
+    
+gulvisha=['apple', 'banana', 'fig', 'grape' , 'cherry']
+print(gulvisha)
+print(len(gulvisha))
+print(gulvisha[2])
+print(gulvisha[-3])
+print(gulvisha[1:4])
+print(gulvisha[:4])
+print(gulvisha[2:])
+print(gulvisha[0:5:2])
+# append
+gulvisha.append('kiwi')
+print(gulvisha)
+# nested listing
+gulvisha1=[[23,45], [21,54]]
+print(gulvisha1)
+# reverse
+gulvisha.reverse()
+print(gulvisha)
+
+
+gulvisha=['apple', 'banana', 'fig', 'grape' , 'cherry']
+print(gulvisha)
+print(len(gulvisha))
+print(gulvisha[2])
+print(gulvisha[-3])
+print(gulvisha[1:4])
+print(gulvisha[:4])
+print(gulvisha[2:])
+print(gulvisha[0:5:2])
+# append
+gulvisha.append('kiwi')
+print(gulvisha)
+# nested listing
+gulvisha1=[[23,45], [21,54]]
+print(gulvisha1)
+# reverse
+gulvisha.reverse()
+print(gulvisha)
+
+
+# Activity-2
+def match_words(words):
+    ctr=0
+    lst=[]
+    for word in words:
+        if len(word)>1 and word[0]==word[-1]:
+            ctr+=1
+            lst.append(word)
+    print("number of words with same first and last letter: ", lst)
+    return ctr
+count=match_words(['abc', 'xyz', 'aba', '1221'])
+print("count: ", count)
+
+
+# Activity-3
+L= [1,2,3,4,5,6,7,8,9,10]
+print("original list: ", L)
+count=0
+for i in L:
+    count+=i
+average=count/len(L)
+print("average: ", average)
+print("sum: ", count)
+
+# activity-1 tuples
+tuplex=("w", 3, "r", 2.5, "s", "o", "u", "r",False, "e")
+print(tuplex)
+print(len(tuplex))
+print(tuplex.count("r"))
+print(tuplex[3:5])
+print(tuplex[0:9:2])
+
+# activity-2
+tupley=("fruits", "vegetables", "meat", "dairy", "bread")
+print("tuple 1: ", tupley)
+tuplez=("apple", "banana", "fig", "grape" , "cherry")
+print("tuple 2: ", tuplez)
+tuplex=tupley+tuplez
+print("tuple 3: ", tuplex)
+# flip-flop
+temp=tupley
+tupley=tuplez
+tuplez=temp
+print("tuple 1: ", tupley)
+print("tuple 2: ", tuplez)
+
+
+# activity-3
+weather=(1,0,0,1,0,1,0,0,1,1,0,1)
+sunny=0
+rainy=0
+for i in range(0,12):
+    if (weather[i]==0):
+         rainy+=1
+    else:
+        sunny+=1
+if (sunny>rainy):
+     print("Good weather")
+else:
+     print("Bad weather")
+

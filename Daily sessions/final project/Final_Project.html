@@ -4,12 +4,16 @@
 <head>
   <title>Navigation Bar Example</title>
   <link rel="stylesheet" href="Final_Project.css">
+  <link rel="js" href="final_project.js">
   <!-- Bootstrap CSS -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
 
   <style>
     /* Custom Banner Styling */
@@ -24,7 +28,8 @@
       color: white;
       text-align: center;
       position: relative;
-    }.banner::before {
+    }
+    .banner::before {
       content: "";
       position: absolute;
       top: 0;
@@ -122,7 +127,8 @@
           <p>
             Welcome to our website! We are a team of passionate developers dedicated to creating high-quality, responsive, and user-friendly web experiences.
           </p>
-          <button class="btn btn-primary mt-3">Learn More</button></div>
+          <button class="btn btn-primary mt-3">Learn More</button>
+        </div>
       </div>
     </div>
   </section>
@@ -166,56 +172,134 @@
     </div>
   </section>
 
-  <!-- DAY-3 CODE -->
+  <!-- NEW SECTION ADDED -->
+  <!-- Functioning of the Calculator Section -->
+  <section id="functioning" class="py-5 text-center bg-light">
+    <div class="container">
+      <h2 class="mb-4 fw-bold">Functioning of the Calculator</h2>
+      <p class="lead">
+        This simple calculator demonstrates how CSS enhances user experience through design. 
+        Buttons include smooth hover and press animations, a glowing display area, and 
+        soft transitions to make calculation interactive and visually appealing.
+      </p>
+    </div>
+  </section>
 
-<!-- <!DOCTYPE html> -->
-<!-- <html lang="en"> -->
-<!-- <head> -->
-  <!-- <meta charset="UTF-8" /> -->
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-  <h2>A simple calculator</h2>
-  <!-- <link rel="stylesheet" href="style.css" /> -->
-<!-- </head> -->
-<!-- <body> -->
+<!-- DAY-3 CODE -->
+<h2 class="text-center my-4">A Simple Calculator</h2>
 <div id="container">
   <div id="calculator">
-      <div id="display">
-        <input type="text" id="result" disabled />
-      </div>
+    <div id="display">
+      <input type="text" id="result" disabled />
+    </div>
+    <div id="keyboard">
+      <button class="operator" id="clear">C</button>
+      <button class="operator" id="backspace">CE</button>
+      <button class="operator" id="modulus">%</button>
+      <button class="operator" id="divide">÷</button>
 
-      <div id="keyboard">
-        <button class="operator" id="clear">C</button>
-        <button class="operator" id="backspace">CE</button>
-        <button class="operator" id="%">%</button>
-        <button class="operator" id="divide">÷</button>
+      <button class="number" id="7">7</button>
+      <button class="number" id="8">8</button>
+      <button class="number" id="9">9</button>
+      <button class="operator" id="multiply">&times;</button>
 
-        <button class="number" id="7">7</button>
-        <button class="number" id="8">8</button>
-        <button class="number" id="9">9</button>
-        <button class="operator" id="multiply">&times;</button>
+      <button class="number" id="4">4</button>
+      <button class="number" id="5">5</button>
+      <button class="number" id="6">6</button>
+      <button class="operator" id="subtract">−</button>
 
-        <button class="number" id="4">4</button>
-        <button class="number" id="5">5</button>
-        <button class="number" id="6">6</button>
-        <button class="operator" id="subtract">−</button>
+      <button class="number" id="1">1</button>
+      <button class="number" id="2">2</button>
+      <button class="number" id="3">3</button>
+      <button class="operator" id="add">+</button>
 
-        <button class="number" id="1">1</button>
-        <button class="number" id="2">2</button>
-        <button class="number" id="3">3</button>
-        <button class="operator" id="add">+</button>
-
-        <button class="empty" id="empty1"></button>
-        <button class="number" id="0">0</button>
-        <button class="empty" id="empty2"></button>
-        <button class="operator" id="equals">=</button>
-      </div>
+      <button class="empty" id="empty1"></button>
+      <button class="number" id="0">0</button>
+      <button class="empty" id="empty2"></button>
+      <button class="operator" id="equals">=</button>
+    </div>
   </div>
 </div>
+<!-- DAY-3 CODE END -->
 
-  <script src="script.js"></script>
-<!-- </body> -->
-<!-- </html> -->
-<!-- DAY 3 CODE END -->
+<!-- WORKING CALCULATOR SCRIPT -->
+<script>
+  const result = document.getElementById("result");
+  const buttons = document.querySelectorAll("#keyboard button");
+
+  let displayValue = ""; // what user sees
+  let currentInput = "";
+  let operator = "";
+  let previousInput = "";
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const id = button.id;
+      const text = button.textContent;
+
+      // Numbers
+      if (button.classList.contains("number")) {
+        currentInput += text;
+        displayValue += text;
+        result.value = displayValue;
+      }
+      // Clear all
+      else if (id === "clear") {
+        currentInput = "";
+        previousInput = "";
+        operator = "";
+        displayValue = "";
+        result.value = "";
+      }
+      // Backspace
+      else if (id === "backspace") {
+        currentInput = currentInput.slice(0, -1);
+        displayValue = displayValue.slice(0, -1);
+        result.value = displayValue;
+      }
+      // Equals (=)
+      else if (id === "equals") {
+        if (previousInput && currentInput && operator) {
+          const output = calculate(previousInput, currentInput, operator);
+          displayValue += " = " + output;
+          result.value = displayValue;
+          // Reset
+          currentInput = output;
+          previousInput = "";
+          operator = "";
+          displayValue = output.toString(); // allow chaining next ops
+        }
+      }
+      // Operator (+, −, ×, ÷, %)
+      else {
+        if (currentInput === "") return; // ignore if pressed first
+        if (previousInput !== "") {
+          const output = calculate(previousInput, currentInput, operator);
+          previousInput = output;
+        } else {
+          previousInput = currentInput;
+        }
+        operator = id;
+        displayValue += " " + text + " ";
+        result.value = displayValue;
+        currentInput = "";
+      }
+    });
+  });
+
+  function calculate(a, b, op) {
+    a = parseFloat(a);
+    b = parseFloat(b);
+    switch (op) {
+      case "add": return a + b;
+      case "subtract": return a - b;
+      case "multiply": return a * b;
+      case "divide": return b !== 0 ? a / b : "Error";
+      case "modulus": return a % b;
+      default: return b;
+    }
+  }
+</script>
 
   <!-- Social Media Section -->
   <section class="social-section">
@@ -230,11 +314,13 @@
       </div>
     </div>
   </section>
+
   <footer>
     <div class="container">
       <h2>@copyright-2025</h2>
     </div>
   </footer>
+
 
   <!-- Bootstrap Icons CDN -->
   <link
@@ -245,4 +331,10 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-</body></html>
+    <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+</html>
