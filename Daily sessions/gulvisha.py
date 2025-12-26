@@ -366,3 +366,217 @@ if (sunny>rainy):
 else:
      print("Bad weather")
 
+# Activity-1
+numers1= [1,2,3,4,5]
+numbers2= [6,7,8,9,10]
+result=map(lambda x,y: x+y, numers1, numbers2)
+print(list(result))
+
+nums= [1,2,3,4,5,6,7,8,9,10]
+def sq(n):
+    return n*n
+square = list(map(sq, nums))
+print(square)
+print(list(map(lambda x: x*x, nums)))
+
+# Activity-2
+s1={2,3,1}
+s2={'b', 'a', 'c'}
+s3=list(zip(s1,s2))
+print(s3, "\n")
+print(sorted(s3))
+
+
+list1= [10,20.30]
+list2= [100,200,300]
+for x, y in zip(list1, list2[::-1]):
+     print(x, y)
+
+# Activity-3
+for i in range(10):
+    if i==5:
+        print(exit)
+        exit()
+    print(i)
+    
+
+
+# # Activity-1
+# ----- TIC TAC TOE GAME -----
+
+# Initialize the board
+# theBoard = {
+#     '7': ' ', '8': ' ', '9': ' ',
+#     '4': ' ', '5': ' ', '6': ' ',
+#     '1': ' ', '2': ' ', '3': ' '
+# }
+
+# board_keys = list(theBoard.keys())
+
+# # Function to print the board
+# def printBoard(board):
+#     print(board['7'] + '|' + board['8'] + '|' + board['9'])
+#     print('-+-+-')
+#     print(board['4'] + '|' + board['5'] + '|' + board['6'])
+#     print('-+-+-')
+#     print(board['1'] + '|' + board['2'] + '|' + board['3'])
+#     print()
+
+# # Main game function
+# def game():
+#     turn = 'X'
+#     count = 0
+#     game_over = False
+
+#     for i in range(9):  # Maximum 9 moves
+#         printBoard(theBoard)
+#         print("It's your turn, " + turn + ". Move to which place? (1-9)")
+#         move = input()
+
+#         # Validate input
+#         if move not in theBoard:
+#             print("Invalid move! Please choose a number between 1-9.\n")
+#             continue
+
+#         # Check if the spot is empty
+#         if theBoard[move] == ' ':
+#             theBoard[move] = turn
+#             count += 1
+#         else:
+#             print("That place is already filled. Try again.\n")
+#             continue
+
+#         # Check for a win after 5 moves
+#         if count >= 5:
+#             if (theBoard['7'] == theBoard['8'] == theBoard['9'] != ' ' or
+#                 theBoard['4'] == theBoard['5'] == theBoard['6'] != ' ' or
+#                 theBoard['1'] == theBoard['2'] == theBoard['3'] != ' ' or
+#                 theBoard['1'] == theBoard['4'] == theBoard['7'] != ' ' or
+#                 theBoard['2'] == theBoard['5'] == theBoard['8'] != ' ' or
+#                 theBoard['3'] == theBoard['6'] == theBoard['9'] != ' ' or
+#                 theBoard['7'] == theBoard['5'] == theBoard['3'] != ' ' or
+#                 theBoard['1'] == theBoard['5'] == theBoard['9'] != ' '):
+
+#                 printBoard(theBoard)
+#                 print("Game Over.\n")
+#                 print("**** " + turn + " won! ****\n")
+#                 game_over = True
+#                 break
+
+#         # If all 9 moves done and no winner → Tie
+#         if count == 9 and not game_over:
+#             printBoard(theBoard)
+#             print("Game Over.\nIt's a Tie!\n")
+
+#         # Switch turn
+#         turn = 'O' if turn == 'X' else 'X'
+
+#     # Ask for restart
+#     restart = input("Do you want to play again? (y/n): ")
+#     if restart.lower() == 'y':
+#         for key in board_keys:
+#             theBoard[key] = ' '
+#         game()
+
+# # Run the game
+# if __name__ == "__main__":
+#     game()
+
+# print("above game - tic tac toe")
+
+
+import random
+
+num = random.randint(1, 100)
+print("Guess the number (1–100)")
+
+while True:
+    guess = int(input("Your guess: "))
+    if guess < num:
+        print("Too low! Try a bigger number.")
+    elif guess > num:
+        print("Too high! Try a smaller number.")
+    else:
+        print("🎉 Correct! You guessed it!")
+        break
+
+    # extra hint
+    if abs(num - guess) <= 10:
+        print("🔥 You're very close!")
+
+
+# # Activity-1
+class student:
+  grade = 10
+  print("My grade is : ", grade)
+obj=student()
+
+# Activity-2
+class Vehicle:
+  def __init__(self,max_speed, mileage):
+     self.max_speed=max_speed
+     self.mileage=mileage
+
+modelX=Vehicle(200,18)
+print("Model Max speed : ", modelX.max_speed)
+print("Model Mileage : ", modelX.mileage)
+    
+  
+
+class Dog:
+  # Class variable: Shared by all instances of the Dog class
+  species = "Canine" 
+
+  def __init__(self, name, breed):
+      # Instance variables: Unique to each instance of the Dog class
+      self.name = name
+      self.breed = breed
+
+  def display_details(self):
+      """Displays the details of the dog."""
+      print(f"Name: {self.name}")
+      print(f"Breed: {self.breed}")
+      print(f"Species: {Dog.species}\n") # Accessing the class variable
+
+# Create instances of the Dog class for two different breeds
+dog1 = Dog("Buddy", "Golden Retriever")
+dog2 = Dog("Charlie", "Bulldog")
+
+# Display the details of each dog
+print("Details of Dog 1:")
+dog1.display_details()
+
+print("Details of Dog 2:")
+dog2.display_details()
+
+
+
+# Activity-1- inheritance
+class Vehicle:
+   def __init__(self, name, max_speed, mileage):
+      self.name=name
+      self.max_speed=max_speed
+      self.mileage=mileage
+class Bus(Vehicle):
+   pass
+
+School_bus=Bus("School Volvo", 180, 12)
+print("Vehicle Name: ", School_bus.name, "\nSpeed: ", School_bus.max_speed, "\nMileage: ", School_bus.mileage)
+
+# Activity-2
+
+class Person(object):
+  def __init__(self,name, idnumber):
+     self.name=name
+     self.idnumber= idnumber
+  def display(self):
+     print(self.name)
+     print(self.idnumber)
+class Employee(Person):
+   def __init__(self, name, idnumber, salary, post):
+      self.salary=salary
+      self.post=post
+      Person.__init__(self, name, idnumber)
+a = Employee('Rahul', 886012, 200000, "Intern")
+a.display()
+

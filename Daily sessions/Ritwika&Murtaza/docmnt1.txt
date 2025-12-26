@@ -1,0 +1,7 @@
+Hi! This is my document for Test-
+
+Python, a high-level, interpreted programming language, was conceived in the late 1980s by Guido van Rossum at the Centrum Wiskunde & Informatica (CWI) in the Netherlands.
+
+ Its implementation began in December 1989 as a hobby project to occupy van Rossum during the Christmas holidays. 
+
+The language was envisioned as a successor to the ABC programming language, aiming to address some of ABC's limitations, particularly concerning exception handling and its interface with the Amoeba operating system. 
