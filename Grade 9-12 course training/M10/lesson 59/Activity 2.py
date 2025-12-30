@@ -1,15 +1,8 @@
-class student:
-	grade = 10
-	name = "Penguin"
-	
-	def introduction(self):
-		print("Hi I am a student")
+numberLargest = int(input("Enter the largest number: "))
+numberSmallest = int(input("Enter the smallest number: "))
+while numberSmallest:
+    numberStore = numberSmallest
+    numberSmallest = numberLargest % numberSmallest
+    numberLargest = numberStore
 
-	def details(self):
-		print("My name is", self.name)
-		print("I study in Grade", self.grade)
-
-ob = student()
-ob.introduction()
-ob.details()
-
+print("HCF is: ", numberLargest)

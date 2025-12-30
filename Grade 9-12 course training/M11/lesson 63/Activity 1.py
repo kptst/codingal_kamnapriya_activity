@@ -1,13 +1,10 @@
-class Employee:
+def  checkIfSame(number1,number2):
+  if((number1 ^ number2)!= 0):
+    print("numbers are not equal")
 
-	# Initializing (Constructor)
-	def __init__(self):
-		print('Employee created.')
+  else:
+    print("both numbers are equal")
 
-	# Deleting (Destructor)
-	def __del__(self):
-		print('Destructor called, Employee deleted.')
-
-obj = Employee()
-del obj
-
+number1 = int(input("Enter first number to compare"))
+number2 = int(input("Enter second number to compare"))
+checkIfSame(number1,number2)

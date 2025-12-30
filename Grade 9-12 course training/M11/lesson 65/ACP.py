@@ -1,39 +1,20 @@
-import math
+# Program to find the longest consecutive 1's in binary representation of a number
 
-class Polygon:
-    def __init__(self, sides, length):
-        """
-        sides: number of sides (integer, >= 3)
-        length: side length (float or int)
-        """
-        if sides < 3:
-            raise ValueError("Polygon must have at least 3 sides.")
-        self.sides = sides
-        self.length = length
+def max1(number):
 
-    def perimeter(self):
-        return self.sides * self.length
+	# Initialize result
+	count = 0
 
-    def interior_angle(self):
-        # Each interior angle in a regular polygon
-        return (self.sides - 2) * 180 / self.sides
+	# Count the number of iterations to reach number = 0.
+	while (number!=0):
+	
+		# This operation reduces length
+		# of every sequence of 1s by one.
+		number = (number & (number << 1))
 
-    def area(self):
-        # Area of a regular polygon using formula:
-        # (n * s^2) / (4 * tan(pi/n))
-        return (self.sides * self.length**2) / (4 * math.tan(math.pi / self.sides))
+		count=count+1
+	
+	return count
 
-    def __str__(self):
-        return (f"Polygon with {self.sides} sides of length {self.length}\n"
-                f"Perimeter: {self.perimeter()}\n"
-                f"Interior Angle: {self.interior_angle():.2f}°\n"
-                f"Area: {self.area():.2f}")
-
-
-# Example Usage
-if __name__ == "__main__":
-    n = int(input("Enter number of sides: "))
-    s = float(input("Enter side length: "))
-
-    polygon = Polygon(n, s)
-    print(polygon)
+number = int(input("Enter your number : "))
+print("Longest consecutive 1's length : ",max1(number))

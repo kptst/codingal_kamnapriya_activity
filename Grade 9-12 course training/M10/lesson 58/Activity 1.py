@@ -1,13 +1,12 @@
-class Employee:
-
-	# Initializing (Constructor)
-	def __init__(self):
-		print('Employee created.')
-
-	# Deleting (Destructor)
-	def __del__(self):
-		print('Destructor called, Employee deleted.')
-
-obj = Employee()
-del obj
-
+number = int(input("Input number:"))
+result = 0
+temp = number
+while temp!=0:
+  digit = temp % 10 
+  result = result+digit**3
+  temp = temp//10
+print(result)
+if number == result:
+  print(number, "is an armstrong number ")
+else:
+  print(number, "is not an armstrong number ")

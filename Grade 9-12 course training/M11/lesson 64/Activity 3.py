@@ -1,44 +1,15 @@
-# import necessary packages
-from abc import ABC, abstractmethod
-# create a base class
-class Animal(ABC):
+def computePower(x, y):  
+  result = 1
+  while y>0:
+      if(y%2==0): 
+          x=x*x
+          y>>=1
+      else:
+          result = result * x
+          y = y - 1
+   return result
+x = int(input("Enter x for x^y : "))
+y = int(input("Enter y for x^y : "))
+print("Total : ",(computePower(x, y)))
 
-    # abstract method
-	# should be implemented by all sub-classes
-	def move(self):
-		pass
-
-# sub classes
-class Human(Animal):
-
-	def move(self):
-		print("I can walk and run")
-
-class Snake(Animal):
-
-	def move(self):
-		print("I can crawl")
-
-class Dog(Animal):
-
-	def move(self):
-		print("I can bark")
-
-class Lion(Animal):
-
-	def move(self):
-		print("I can roar")
-		
-# Driver code
-R = Human()
-R.move()
-
-K = Snake()
-K.move()
-
-R = Dog()
-R.move()
-
-K = Lion()
-K.move()
 

@@ -1,16 +1,29 @@
-class Person:
-  def __init__(self, fname, lname):
-    self.firstname = fname
-    self.lastname = lname
+def sum(n):
+    return n*(n+1)/2
+ 
 
-  def printname(self):
-    print(self.firstname, self.lastname)
+Space complexity: θ(1), Auxiliary space = θ(1)
 
-class Student(Person):
-  def __init__(self, fname, lname, year):
-    super().__init__(fname, lname)
-    self.graduationyear = year
+Linear space :
 
-x = Student("Joey", "King", 2021)
-x.printname()
-print(x.graduationyear)
+ 
+
+def arraysum(a): 
+    sum=0
+    for i in a:
+        sum = sum + i
+          
+    return(sum) 
+ 
+a = [12, 3, 4, 15] 
+arraysum(a)
+ 
+
+With the size of the array, the space also required increases.
+
+Space complexity: θ(n), Auxiliary space = θ(1)
+def summ(n): 
+    if(n<=0):
+        return
+    return n+ summ(n-1)
+ 

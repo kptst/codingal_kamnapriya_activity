@@ -1,26 +1,25 @@
-# parent class
-class Person( object ):	
+This recursive function will take 
 
-		# __init__ is known as the constructor		
-		def __init__(self, name, idnumber):
-				self.name = name
-				self.idnumber = idnumber
-		def display(self):
-				print(self.name)
-				print(self.idnumber)
+ 
 
-# child class
-class Employee( Person ):		
-		def __init__(self, name, idnumber, salary, post):
-				self.salary = salary
-				self.post = post
+T(n) = T(n/2) +T(n/2)  for 2 recursive calls and for rest code our function will take constant time.
 
-				# invoking the __init__ of the parent class
-				Person.__init__(self, name, idnumber)
+ 
 
-				
-# creation of an object variable or an instance
-a = Employee('Penguin', 20210401, 15000, "Intern")	
+def prints(n):
+    if(n<=0):
+        return
+    print("Codingal")
+    prints(n/2)
+    prints(n/2)
+ 
 
-# calling a function of the class Person using its instance
-a.display()
+So, our recurrence relation will be:
+
+ 
+
+T(n) = T(n/2) + T(n/2) + θ(1) when n>0 
+
+T(n) = θ(1) when n<=0
+
+The recurrence tree for  T(n) = T(n/2) + T(n/2) + θ(1) 

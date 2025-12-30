@@ -1,24 +1,25 @@
-class Addition:
-    # Defininf a constructor
-    def __init__(self,x,y,z):
-        # with the help of self.xyz 
-		# we are initializing instance variable
-        self.num1=x
-        self.num2=y
-        self.num3=z
+# Program to reverse all bits of a number
+ 
+def reverseBits(number) :
 
-    def result(self):
-        self.num=self.num1+self.num2+self.num3
-        print('Output:',self.num)
-
-
-# Here we create the object for call 
-# which calls the constructor
-x = int(input("Enter 1st Number"))
-y = int(input("Enter 2nd Number"))
-z = int(input("Enter 3rd Number"))
-Sum = Addition(x,y,z)
-
-# calling the instance method 
-# using the object Sum
-Sum.result()
+	# Below variable will hold the reversed bit number 
+    reversed = 0
+     
+    # While number is not 0
+    while (number > 0) :
+         
+        # Shift reversed number to left
+        reversed = reversed << 1
+         
+        # Check if last bit is 0 or 1
+		# If 1 add it using OR operator else leave 
+        if (number & 1 == 1) :
+            reversed = reversed ^ 1
+         
+        # Right shift the orignal number
+        number = number >> 1
+         
+    return reversed
+     
+number = int(input("Enter your number : "))
+print("Number with reversed bits : ",reverseBits(number))

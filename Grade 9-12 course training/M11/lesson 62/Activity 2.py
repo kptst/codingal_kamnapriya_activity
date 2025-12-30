@@ -1,15 +1,11 @@
-my_set = {1,2,2,3,4,4,4}
-print("Set :", my_set)
-
-my_set.add(5)
-print("Updated Set:", my_set)
-
-set1 = my_set
-set2 = {2,4,4,6}
-
-print("\nSet 1", set1)
-print("Set 2", set2)
-print("Difference")
-print(set1.difference(set2))
-print("Symmeteric Difference")
-print(set1.symmetric_difference(set2))
+def setOrNot(number, n):
+  # You need to define 'mask' before using it
+  mask = 1  # Assuming you want to check if the bit is set or not 
+  if (n & mask) == 1 or (n & mask) == 0:  # Corrected comparison and OR operator
+    if number & (1 << (n - 1)):
+      print("SET")
+    else:
+      print("NOT SET")
+number = int(input("Enter the number: "))
+n = int(input("Enter the bit position: "))
+setOrNot(number, n)

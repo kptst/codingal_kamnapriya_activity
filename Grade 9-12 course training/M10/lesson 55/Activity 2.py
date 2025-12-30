@@ -1,33 +1,51 @@
-# empty dictionary
-my_dict = {}
+For function1, the Algorithm goes like this:
 
-# dictionary with integer keys
-my_dict = {1: 'apple', 2: 'ball'}
+ 
 
-# dictionary with mixed keys
-my_dict = {'name': 'John', 1: [2, 4, 3]}
+(4*5) / 2
 
-my_dict = {'name': 'Jack', 'age': 26}
+ 
 
-# Output: Jack
-print(my_dict['name'])
-print(my_dict.get('age'))
+So, the number of iterations will be 1.
 
-# update value
-my_dict['age'] = 27
-print(my_dict)
+ 
 
-# add item
-my_dict['address'] = 'Downtown'
-print(my_dict)
+For function2 the Algorithm goes like:
 
-# remove particular element
-my_dict.pop('age')
-print(my_dict)
+ 
 
-# access a particular element
-print("Address :", my_dict.get('address'))
+1 + 2 + 3 + 4
 
-# remove all the elements
-my_dict.clear()
-print(my_dict)
+ 
+
+So, number of iterations will be 1 + 1 + 1 + 1 = 4
+
+ 
+
+For function3 the Algorithm goes like:
+
+ 
+
+1 + (1+1) + (1+1+1) + (1+1+1+1)
+
+ 
+
+So, number of iterations will be 1 + 2 + 3 + 4 = 10
+
+ 
+
+So for our functions 1,2 and 3, the number of iterations will depend upon n (4 in our case):
+
+Fun1 : \(C1\)
+Fun2 : \(C2(n) + C3\)
+Fun3: \(C4(n^{2}) + C5(n) + C6\)
+ 
+
+The above conversions are known as the Asymptomatic analysis of the algorithm.
+
+ 
+
+Comparison between function1 and function2 :
+
+ 
+

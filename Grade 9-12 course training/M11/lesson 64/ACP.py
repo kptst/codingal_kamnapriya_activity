@@ -1,39 +1,30 @@
-import math
+# Program to check if a number is power of 8
 
-class Polygon:
-    def __init__(self, sides, length):
-        """
-        sides: number of sides (integer, >= 3)
-        length: side length (float or int)
-        """
-        if sides < 3:
-            raise ValueError("Polygon must have at least 3 sides.")
-        self.sides = sides
-        self.length = length
+def powerOf8(number):
+	
+	# Variable i will denote the bit
+	# that we are currently at
+	bitPosition = 0
+	mask = 1
+	
+	while (bitPosition <= 63):
+		mask <<= bitPosition
 
-    def perimeter(self):
-        return self.sides * self.length
+		# If only set bit in n
+		# is at position i
+		if (mask == number):
+			return True
 
-    def interior_angle(self):
-        # Each interior angle in a regular polygon
-        return (self.sides - 2) * 180 / self.sides
+		# Get to next valid bit position
+		bitPosition += 3
+		mask = 1
 
-    def area(self):
-        # Area of a regular polygon using formula:
-        # (n * s^2) / (4 * tan(pi/n))
-        return (self.sides * self.length**2) / (4 * math.tan(math.pi / self.sides))
+	return False
 
-    def __str__(self):
-        return (f"Polygon with {self.sides} sides of length {self.length}\n"
-                f"Perimeter: {self.perimeter()}\n"
-                f"Interior Angle: {self.interior_angle():.2f}°\n"
-                f"Area: {self.area():.2f}")
+number = int(input("Enter your number : "))
+if (powerOf8(number)):
+	print("Yes ",number,"is power of 8")
+else:
+	print("No ",number,"is not power of 8")
 
 
-# Example Usage
-if __name__ == "__main__":
-    n = int(input("Enter number of sides: "))
-    s = float(input("Enter side length: "))
-
-    polygon = Polygon(n, s)
-    print(polygon)

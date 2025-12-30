@@ -1,26 +1,10 @@
-# parent class
-class Person( object ):	
+def power2(number):
+  if number <= 0:
+      return False
+  return (number & (number - 1)) == 0
 
-		# __init__ is known as the constructor		
-		def __init__(self, name, idnumber):
-				self.name = name
-				self.idnumber = idnumber
-		def display(self):
-				print(self.name)
-				print(self.idnumber)
-
-# child class
-class Employee( Person ):		
-		def __init__(self, name, idnumber, salary, post):
-				self.salary = salary
-				self.post = post
-
-				# invoking the __init__ of the parent class
-				Person.__init__(self, name, idnumber)
-
-				
-# creation of an object variable or an instance
-a = Employee('Penguin', 20210401, 15000, "Intern")	
-
-# calling a function of the class Person using its instance
-a.display()
+n = int(input("Enter a number: "))
+if power2(n):
+    print("\nThe number is a power of 2")
+else:
+    print("\nThe number is not a power of 2")

@@ -1,33 +1,15 @@
-class Cat:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+def swap(a,b):
+  a = a^b
+  b = a^b
+  a = a^b
+  print("After swapping: a =",a,"and b =",b)
 
-    def info(self):
-        print(f"I am a cat. My name is {self.name}. I am {self.age} years old.")
+def swap2(a,b):
+  a = (a&b)+(a|b)
+  b = a+(~b)+1
+  a = a+(~b)+1
+  print("After swapping: a =",a,"and b =",b)
 
-    def make_sound(self):
-        print("Meow")
-
-
-class Dog:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-    def info(self):
-        print(f"I am a dog. My name is {self.name}. I am {self.age} years old.")
-
-    def make_sound(self):
-        print("Bark")
-
-
-cat1 = Cat("Dodo", 2.5)
-dog1 = Dog("Tyson", 8)
-
-for animal in (cat1, dog1):
-    animal.make_sound()
-    animal.info()
-
-	
-    
+swap(10,20)
+swap2(10,20)
+  

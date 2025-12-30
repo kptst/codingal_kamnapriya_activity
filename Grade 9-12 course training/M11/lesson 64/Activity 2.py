@@ -1,16 +1,10 @@
-class Person:
-  def __init__(self, fname, lname):
-    self.firstname = fname
-    self.lastname = lname
+def power4(number):
+  if number <= 0:
+      return False
+  return (number & (number - 1)) == 0
 
-  def printname(self):
-    print(self.firstname, self.lastname)
-
-class Student(Person):
-  def __init__(self, fname, lname, year):
-    super().__init__(fname, lname)
-    self.graduationyear = year
-
-x = Student("Joey", "King", 2021)
-x.printname()
-print(x.graduationyear)
+n = int(input("Enter a number: "))
+if (power4n):
+    print("\nThe number is a power of 4")
+else:
+    print("\nThe number is not a power of 4")

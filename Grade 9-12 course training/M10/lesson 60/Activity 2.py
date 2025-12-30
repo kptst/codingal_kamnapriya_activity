@@ -1,15 +1,19 @@
-my_set = {1,2,2,3,4,4,4}
-print("Set :", my_set)
+def primeSeive(n):
+    prime = [True for i in range(n + 1)]
+    currentNumber = 2
+    while (currentNumber * currentNumber <= n):
+        if (prime[currentNumber] == True):
+            for i in range(currentNumber ** 2, n + 1, currentNumber):
+                prime[i] = False
+        currentNumber += 1
+    prime[0]= False
+    prime[1]= False
+    for p in range(n + 1):
+        if prime[p]:
+            print(p)
 
-my_set.add(5)
-print("Updated Set:", my_set)
 
-set1 = my_set
-set2 = {2,4,4,6}
-
-print("\nSet 1", set1)
-print("Set 2", set2)
-print("Difference")
-print(set1.difference(set2))
-print("Symmeteric Difference")
-print(set1.symmetric_difference(set2))
+n = int(input("Enter number to find all prime numbers less than the number : "))
+primeSeive(n)
+print ("Following are the prime numbers smaller.")
+print ("than or equal to")

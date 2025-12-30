@@ -1,28 +1,17 @@
-lst = ['Apple', 'Guava', 'Mango', 'Banana', 'Kiwi']
-
-print("Length of list:", len(lst))
-print("First Element:", lst[0])
-print("Last Element:", lst[-1])
-
-lst.append('Papaya')
-print("Updated List :", lst)
-
-lst.remove('Guava')
-print("Updated List :", lst)
-
-lst.sort()
-print("Sorted List:", lst)
-
-lst.pop(1)
-print("Updated List :", lst)
-
-lst.reverse()
-print("Reversed List :", lst)
-
-print("Multiplication on List :", lst*2)
-
-lst = lst[:4]
-print("Sliced List :", lst)
-
-lst.clear()
-print("Updated List :", lst)
+def fun1(n):
+  return n*(n+1)/2
+print(fun1(4))
+def fun2(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += i
+def fun3(n):
+    sum = 0
+    for i in range(1, n+1):
+      for j in range(i, i+1):
+        sum += 1
+      return sum
+      
+      
+  
+  

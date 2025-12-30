@@ -1,15 +1,14 @@
-class student:
-	grade = 10
-	name = "Penguin"
-	
-	def introduction(self):
-		print("Hi I am a student")
-
-	def details(self):
-		print("My name is", self.name)
-		print("I study in Grade", self.grade)
-
-ob = student()
-ob.introduction()
-ob.details()
+def flips(num1,num2):
+  flip = 0
+  while (num1 > 0 or num2 > 0):
+   t1 = num1 & 1
+   t2 = num2 & 1
+   if t1 != t2:
+    flip += 1
+   num1 >>= 1
+   num2 >>= 1
+  return flip
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+print("Number of flips needed: ", flips(num1, num2))
 

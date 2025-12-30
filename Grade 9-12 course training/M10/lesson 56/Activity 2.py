@@ -1,22 +1,11 @@
-class Computer:
+def OnTime(n):
+  iteration=0
+  for i in range(1,n+1):
+    iteration+=1
+  print("When n is ",n," Iterations = ",iteration)
 
-    def __init__(self):
-        self.__maxprice = 900
+OnTime(10)
+OnTime(20)
+OnTime(42)
 
-    def sell(self):
-        print("Selling Price: {}".format(self.__maxprice))
-
-    def setMaxPrice(self, price):
-        self.__maxprice = price
-
-c = Computer()
-c.sell()
-
-# change the price
-c.__maxprice = 1000
-c.sell()
-
-# using setter function
-c.setMaxPrice(1000)
-c.sell()
-
+print("\nWith every 'n' the time taken and iterations will increase linearly")
