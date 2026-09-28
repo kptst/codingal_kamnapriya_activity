@@ -1,1 +1,0 @@
-// copy main.jsx file from the lesson plan and paste it here.
